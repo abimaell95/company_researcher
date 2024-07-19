@@ -1,0 +1,34 @@
+plan:
+  description: >
+    1. Prioritize the updated information, key numbers and relevant information on {company}
+    2. Identify the target audience, considering their interests and pain points.
+    3. Develop a detailed content outline including an presentation of the company, numbers, and updated information.
+  expected_output: >
+    A comprehensive content plan document.
+
+create_html:
+  description: >
+    1. Use the content plan to craft a compelling informative web site of {company}.
+    2. Sections/Subtitles are properly named in an engaging manner.
+    3. Ensure the post is structured with cards of different kind of information you can add icons if you want, and use the best practice of structuring information.
+    4. Proofread for grammatical errors and alignment with a report voice.
+  expected_output: >
+    A structured HTML populated with an the content passed by the Company Researcher structuring the contect in a cleverly way and only creating the structure of the page.
+
+create_css:
+  description: >
+    1. Use the HTML Layout code to embed CSS code in a compelling informative site for {company}.
+    2. Create classes and adds to the html tags as you need.
+    3. Adds colors and fonts weight using the best practice in User Experience in an engaging manner.
+    4. Ensure that the css provides a well readable structure in the site.
+    5. Search the color palette and design system of {company}
+    6. Avoid changing the content in the HTML.
+  expected_output: >
+    A structured HTML document populated including the CSS classes, and the classes inside the HTML elements. 
+    Layouting the content in a cleverly way and always thinking in the User Experience readability.
+
+minify_html:
+  description: >
+    Took the HTML Generated and put all the tags in just one line.
+  expected_output: >
+    A HTML document in just one line, minified.
