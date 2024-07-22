@@ -17,25 +17,10 @@ class CompanyResearchCrew():
         )
 
     @agent
-    def layout_arquitect(self) -> Agent:
+    def formatter(self) -> Agent:
         return Agent(
-            config=self.agents_config['layout_arquitect'],
+            config=self.agents_config['formatter'],
             tools=[SerperDevTool()],
-            verbose=True
-        )
-
-    @agent
-    def css_expert(self) -> Agent:
-        return Agent(
-            config=self.agents_config['css_expert'],
-            tools=[SerperDevTool()],
-            verbose=True
-        )
-
-    @agent
-    def html_minifier(self) -> Agent:
-        return Agent(
-            config=self.agents_config['html_minifier'],
             verbose=True
         )
 
@@ -47,32 +32,18 @@ class CompanyResearchCrew():
         )
 
     @task
-    def create_html(self) -> Task:
+    def format_content(self) -> Task:
         return Task(
-            config=self.tasks_config['create_html'],
-            agent=self.layout_arquitect()
-        )
-    
-    @task
-    def create_css(self) -> Task:
-        return Task(
-            config=self.tasks_config['create_css'],
-            agent=self.css_expert()
-        )
-
-    @task
-    def minify_html(self) -> Task:
-        return Task(
-            config=self.tasks_config['minify_html'],
-            agent=self.html_minifier()
+            config=self.tasks_config['format_content'],
+            agent=self.formatter()
         )
     
     @crew
     def crew(self) -> Crew:
         """Creates the Fraud Detection crew"""
         return Crew(
-            agents=[self.researcher(), self.layout_arquitect(), self.css_expert(),  self.html_minifier()],
-            tasks=[self.plan(), self.create_html(), self.create_css(), self.minify_html()],
+            agents=[self.researcher(), self.formatter()],
+            tasks=[self.plan(), self.format_content()],
             process=Process.sequential,
             verbose=2
         )

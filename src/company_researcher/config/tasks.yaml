@@ -6,29 +6,11 @@ plan:
   expected_output: >
     A comprehensive content plan document.
 
-create_html:
+format_content:
   description: >
-    1. Use the content plan to craft a compelling informative web site of {company}.
-    2. Sections/Subtitles are properly named in an engaging manner.
-    3. Ensure the post is structured with cards of different kind of information you can add icons if you want, and use the best practice of structuring information.
-    4. Proofread for grammatical errors and alignment with a report voice.
+    1. Took the content of an oultine and add the next parts: Introduction, Company Overview, Financial Performance, Appela of {company}, Standars and Certifications.
+    3. Structure the content with titles and content.
+    4. Do not add Headings # or another kind of formatting, just line breaks.
+    5. Do not add any recomendations.
   expected_output: >
-    A structured HTML populated with an the content passed by the Company Researcher structuring the contect in a cleverly way and only creating the structure of the page.
-
-create_css:
-  description: >
-    1. Use the HTML Layout code to embed CSS code in a compelling informative site for {company}.
-    2. Create classes and adds to the html tags as you need.
-    3. Adds colors and fonts weight using the best practice in User Experience in an engaging manner.
-    4. Ensure that the css provides a well readable structure in the site.
-    5. Search the color palette and design system of {company}
-    6. Avoid changing the content in the HTML.
-  expected_output: >
-    A structured HTML document populated including the CSS classes, and the classes inside the HTML elements. 
-    Layouting the content in a cleverly way and always thinking in the User Experience readability.
-
-minify_html:
-  description: >
-    Took the HTML Generated and put all the tags in just one line.
-  expected_output: >
-    A HTML document in just one line, minified.
+    A Formatted text without any kind of feedback, with only titles and content, ready to insert in a Salesforce textarea field.
