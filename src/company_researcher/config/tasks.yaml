@@ -1,14 +1,14 @@
 plan:
   description: >
     1. Prioritize the updated information, key numbers and relevant information on {company}
-    2. Identify the target audience, considering their interests and pain points.
-    3. Develop a detailed content outline including an presentation of the company, numbers, and updated information.
+    2. Develop a detailed content outline including an presentation of the company, financial numbers, and updated information like standards and certifications.
+    3. Pass this information to the content formatter.
   expected_output: >
     A comprehensive content plan document.
 
 format_content:
   description: >
-    1. Took the content of an oultine and add the next parts: Introduction, Company Overview, Financial Performance, Appela of {company}, Standars and Certifications.
+    1. Took the content of an oultine and add the next parts: Introduction, Company Overview, Financial Performance, Appeal of {company}, Standards and Certifications.
     3. Structure the content with titles and content.
     4. Do not add Headings # or another kind of formatting, just line breaks.
     5. Do not add any recomendations.

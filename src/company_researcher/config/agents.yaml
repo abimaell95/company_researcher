@@ -2,7 +2,7 @@ researcher:
   role: >
     Company Researcher
   goal: >
-    Extract appeal, financial, standar, every information about {company}
+    Extract appeal, financial, standards, every information about {company}
   backstory: >
     You're working on a research about {company}
     You collect information that helps business analysts to learn something about {company} and make informed decisions.

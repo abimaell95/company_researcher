@@ -20,7 +20,6 @@ class CompanyResearchCrew():
     def formatter(self) -> Agent:
         return Agent(
             config=self.agents_config['formatter'],
-            tools=[SerperDevTool()],
             verbose=True
         )
 
@@ -40,7 +39,7 @@ class CompanyResearchCrew():
     
     @crew
     def crew(self) -> Crew:
-        """Creates the Fraud Detection crew"""
+        """Creates the Company Researcher crew"""
         return Crew(
             agents=[self.researcher(), self.formatter()],
             tasks=[self.plan(), self.format_content()],
